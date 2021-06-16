@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Naturalness ABX Test for APSIPA 2021 submission</title>
+    </head>
+
+    <body>
+
+        <!-- 注意書きなど -->
+        <div style="border:1px solid #000000; padding: 10px; border-radius: 0px;">
+            <p>
+                <h1>ABX Test</h1>
+
+                感謝你參加這次的聽測！這是一個ABX test，以下為實驗流程。</br>
+
+                <!-- Thank you for your cooperation in my experiment.</br>
+                This experiment is ABX test.</br>
+                I will explain the experimental procedure. -->
+
+                <h2>流程</h2>
+                <ol>
+                    <li>首先輸入姓名。</li>
+                    <li>請聽兩個音檔，然後選擇<b>較自然</b>的一個。</li>
+                    <li>全部結束後按下「finish」鈕，實驗結果會自動下載。
+                        請將實驗結果用line傳回，或者寄到以下信箱：<br>
+                        wen.chinhuang@g.sp.m.is.nagoya-u.ac.jp</li>
+                </ol>
+
+                <h2>注意</h2>
+                <ul>
+                    <li>這個實驗約需要XX分鐘完成。</li>
+                    <li>實驗中請勿重新整理！</li>
+                    <li>請不要用手機進行此實驗。</li>
+                    <li>可以的話請用耳罩式耳機，一般耳機也可以。請不要用喇叭進行此實驗。</li>
+                </ul>
+
+                <!-- <h2>Experimental Procedure</h2>
+                <ol>
+                    <li>Enter your name.</li>
+                    <li>Listen to the two voices and choose the one that you think is more <b>natural</b>.</li>
+                    <li>When you finish this experiment, press "finish" button and download the result.<br>
+                        Send it to me with line, or send to the following email address.</li>
+                    <li>wen.chinhuang@g.sp.m.is.nagoya-u.ac.jp</li>
+                </ol>
+
+                <h2>Notes</h2>
+                <ul>
+                    <li>This experiment takes about XX minutes.</li>
+                    <li>Please do not update the page during this experiment.</li>
+                    <li>You may not be able to download the results on your phone, so please use your PC.</li>
+                    <li>Please use headphones for this experiment. Do not use the speaker.</li>
+                </ul> -->
+            </p>
+        </div>
+
+        <script type="text/javascript" src="abx.js"></script>
+
+        <div id="Display1">
+            <p> Your name: <br>
+            <input type="text" id="name" value=""></p>
+            <p> Setlist number: <br>
+            <label><input type="radio" name="set" id="number" value="1">1</label><br>
+            <p>
+            <button id="next1" onclick="start_experiment()">next</button>
+            </p>
+        </div>
+
+
+        <div id="Display2" style="display:none;">
+        <!-- 注意書きなど <body onload="init()"> -->
+            <p id="page"></p>
+            <p id="audio_a"></p>
+            <p id="audio_b"></p>
+            <p>
+            <label><input type="radio" name="eval" onclick="evaluation()">A is better</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">B is better</label><br>
+        </p>
+
+        <p>
+        <button id="prev" onclick="prev()">prev</button>
+        <button id="next2" onclick="next()">next</button>
+        <button id="finish" onclick="finish()">finish</button>
+        </p>
+
+
+    </body>
+
+</html>
